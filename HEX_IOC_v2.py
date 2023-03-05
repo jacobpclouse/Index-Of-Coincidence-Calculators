@@ -1,6 +1,16 @@
-# Use this one
+# USE THIS ONE -- Edited on Windows 10 - may need to be edited if you want to use on Linux/MacOS
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Importing Libraries / Modules 
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import binascii
 
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Functions
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# --- Function that computes IOC from ciphertext read from binary file ---
 def compute_index_of_coincidence(ciphertext):
     n = len(ciphertext)
     freqs = [0] * 256
@@ -13,6 +23,9 @@ def compute_index_of_coincidence(ciphertext):
     return ic
 
 
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# MAIN 
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 filename = input("Give me the filename: ")
 output_name = input("REQUIRED: What do you want the output to be called?: ")
 
