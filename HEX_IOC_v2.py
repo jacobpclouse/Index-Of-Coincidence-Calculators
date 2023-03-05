@@ -14,6 +14,7 @@ def compute_index_of_coincidence(ciphertext):
 
 
 filename = input("Give me the filename: ")
+output_name = input("REQUIRED: What do you want the output to be called?: ")
 
 # Open the file in binary mode and read its contents
 with open(filename, 'rb') as f:
@@ -24,3 +25,8 @@ ic = compute_index_of_coincidence(ciphertext_bytes)
 
 # Print the result
 print("The index of coincidence is:", ic)
+
+# # # save string to file
+text_file = open(f"IC_{output_name}.txt", "w")
+n = text_file.write(f"The index of coincidence for {filename} is: {ic}" )
+text_file.close()
